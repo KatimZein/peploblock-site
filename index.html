@@ -1,0 +1,743 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Пеплоблок.ру — Производство стеновых и фундаментных блоков | Баксан, КБР</title>
+<meta name="description" content="Производство пеплоблоков и ФБС в Баксане. Пропаренные блоки с идеальной геометрией. Доставка по КБР и всей России. Без предоплаты.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0b0f'/%3E%3Crect x='3' y='8' width='26' height='18' rx='3' fill='%238faa6e'/%3E%3Crect x='6' y='11' width='8' height='12' rx='1.5' fill='%230a0b0f' opacity='.25'/%3E%3Crect x='18' y='11' width='8' height='12' rx='1.5' fill='%230a0b0f' opacity='.25'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='14' fill='%23fff'%3EП%3C/text%3E%3C/svg%3E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden;max-width:100vw}
+:root{
+--bg:#0a0b0f;
+--bg2:#101118;
+--bg3:#151620;
+--bg4:#1b1c28;
+--border:rgba(255,255,255,.06);
+--border2:rgba(255,255,255,.1);
+--text:#fff;
+--text2:rgba(255,255,255,.55);
+--text3:rgba(255,255,255,.3);
+--gold:#8faa6e;
+--gold2:#a1bc80;
+--gold-bg:rgba(143,170,110,.08);
+--gold-border:rgba(143,170,110,.18);
+--green:#6ec47a;
+--red:#d95548;
+--shadow:0 4px 30px rgba(0,0,0,.4);
+--shadow-lg:0 8px 50px rgba(0,0,0,.5);
+--radius:12px;
+--radius-lg:16px;
+--font:'Inter',system-ui,-apple-system,sans-serif;
+--max-w:1400px;
+--tr:all .35s ease;
+}
+html{scroll-behavior:smooth;font-size:17px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;word-break:break-word}
+a{color:var(--gold);text-decoration:none;transition:color .2s}
+a:hover{color:var(--gold2)}
+img{max-width:100%;display:block}
+svg{max-width:100%}
+input,select,textarea,button{max-width:100%}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 48px}
+
+/* ─── HEADER ─── */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:var(--tr);background:transparent}
+.hdr.scrolled{background:rgba(10,11,15,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:12px 0}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.35rem;font-weight:800;letter-spacing:-.4px;color:#fff}
+.logo span{color:var(--gold)}
+.nav{display:flex;gap:32px;align-items:center;min-width:0}
+.nav a{color:var(--text2);font-size:.88rem;font-weight:500;transition:color .2s;letter-spacing:.2px}
+.nav a:hover{color:#fff}
+.hdr-right{display:flex;align-items:center;gap:20px}
+.hdr-phone{color:var(--text2);font-size:.82rem;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:6px}
+.hdr-phone:hover{color:#fff}
+.hdr-phone svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:8px;font-weight:600;font-size:.88rem;border:none;cursor:pointer;transition:var(--tr);text-decoration:none;letter-spacing:.2px}
+.btn-gold{background:var(--gold);color:#0a0b0f}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,168,76,.25);color:#0a0b0f}
+.btn-outline{border:1.5px solid var(--border2);color:#fff;background:transparent}
+.btn-outline:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-bg);transform:translateY(-2px)}
+.btn-sm{padding:10px 20px;font-size:.78rem}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:6px;z-index:101}
+.burger svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
+
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-content{display:flex;flex-direction:column;justify-content:center;padding:140px 48px 100px 0;position:relative;z-index:2}
+.hero-content .wrap{padding:0;max-width:580px;margin-left:auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px 6px 10px;border:1px solid var(--gold-border);border-radius:50px;font-size:.72rem;font-weight:600;color:var(--gold);margin-bottom:28px;background:var(--gold-bg);letter-spacing:.5px;text-transform:uppercase}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+.hero h1{font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:24px}
+.hero h1 .thin{font-weight:400;color:var(--text2)}
+.hero h1 .gold{color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:var(--text2);line-height:1.85;margin-bottom:40px;max-width:480px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap}
+.hero-trust-item{display:flex;flex-direction:column}
+.hero-trust-item .tv{font-size:1.7rem;font-weight:800;letter-spacing:-.5px}
+.hero-trust-item .tl{font-size:.7rem;color:var(--text3);letter-spacing:.3px;margin-top:2px}
+.hero-visual{position:relative;overflow:hidden}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,transparent 30%)}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text3);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;z-index:3}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollDown 2s ease-in-out infinite}
+@keyframes scrollDown{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1;transform:scaleY(1);transform-origin:top}100%{opacity:0;transform:scaleY(0);transform-origin:bottom}}
+
+/* ─── SECTIONS ─── */
+.sec{padding:100px 0}
+.sec-alt{background:var(--bg2)}
+.sec-dark{background:var(--bg3)}
+.stag{display:inline-flex;align-items:center;gap:8px;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;color:var(--gold);margin-bottom:12px}
+.stag::before{content:'';width:24px;height:1px;background:var(--gold)}
+.sh{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;letter-spacing:-.7px;margin-bottom:16px;line-height:1.15}
+.sd{font-size:.95rem;color:var(--text2);max-width:540px;margin-bottom:48px;line-height:1.85}
+.sh-c{text-align:center}
+.sd-c{text-align:center;margin-left:auto;margin-right:auto}
+
+/* ─── STATS BAR ─── */
+.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 24px;text-align:center;position:relative}
+.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--border)}
+.stat-v{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;letter-spacing:-.5px;color:var(--gold);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.stat-l{font-size:.72rem;color:var(--text3);letter-spacing:.5px;text-transform:uppercase}
+
+/* ─── GALLERY ─── */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:6px;border-radius:var(--radius-lg);overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .5s;filter:brightness(.85)}
+.gallery img:hover{transform:scale(1.04);filter:brightness(1)}
+.gallery img:first-child{grid-row:1/3}
+
+/* ─── PRODUCTS ─── */
+.ptabs{display:flex;gap:4px;margin-bottom:32px;flex-wrap:wrap}
+.ptab{padding:9px 22px;border-radius:6px;background:transparent;border:1.5px solid var(--border2);color:var(--text3);font-size:.78rem;font-weight:600;cursor:pointer;transition:var(--tr)}
+.ptab.active,.ptab:hover{background:var(--gold);color:#0a0b0f;border-color:var(--gold)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:16px}
+.pcard{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--tr);min-width:0}
+.pcard:hover{border-color:var(--gold-border);box-shadow:0 0 40px rgba(201,168,76,.06);transform:translateY(-4px)}
+.pcard-img{height:210px;overflow:hidden;position:relative}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:brightness(.9)}
+.pcard:hover .pcard-img img{transform:scale(1.05);filter:brightness(1)}
+.pcard-img .pcard-badges{position:absolute;top:12px;left:12px;display:flex;gap:5px}
+.pcard-badge{font-size:.62rem;padding:4px 10px;border-radius:4px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.badge-green{background:rgba(92,184,92,.2);color:#5cb85c;border:1px solid rgba(92,184,92,.2)}
+.badge-gold{background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border)}
+.pcard-body{padding:22px}
+.pcard h3{font-size:.92rem;font-weight:700;margin-bottom:4px}
+.pcard-specs{font-size:.74rem;color:var(--text3);margin-bottom:14px;line-height:1.6}
+.pcard-bottom{display:flex;align-items:center;justify-content:space-between}
+.pcard-price{font-size:1.35rem;font-weight:800;color:var(--gold)}
+.pcard-price small{font-size:.5em;color:var(--text3);font-weight:400;margin-left:2px}
+.pcard-btn{width:36px;height:36px;border-radius:8px;background:var(--gold-bg);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--tr);color:var(--gold)}
+.pcard-btn:hover{background:var(--gold);color:#0a0b0f}
+.pcard-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* ─── UTP GRID ─── */
+.ugrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;min-width:0}
+.ucard{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;transition:var(--tr);position:relative;overflow:hidden;min-width:0}
+.ucard:hover{border-color:var(--gold-border);transform:translateY(-3px)}
+.ucard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.ucard:hover::before{opacity:1}
+.ucard-n{font-size:.6rem;color:var(--gold);font-weight:700;letter-spacing:2px;margin-bottom:14px;text-transform:uppercase}
+.ucard-ico{width:44px;height:44px;border-radius:10px;background:var(--gold-bg);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--gold)}
+.ucard-ico svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ucard h3{font-size:.95rem;font-weight:700;margin-bottom:8px;line-height:1.35}
+.ucard p{font-size:.82rem;color:var(--text2);line-height:1.7}
+
+/* ─── PAINS ─── */
+.pains{display:grid;gap:10px}
+.pain{display:grid;grid-template-columns:1fr 48px 1fr;align-items:center;background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--tr);min-width:0}
+.pain:hover{border-color:var(--gold-border)}
+.pain-l{padding:20px 24px;position:relative}
+.pain-l::before{content:'';position:absolute;left:0;top:15%;height:70%;width:3px;background:rgba(231,76,60,.4);border-radius:2px}
+.pain-l h4{font-size:.62rem;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px}
+.pain-l p{font-size:.84rem;color:var(--text2);line-height:1.5}
+.pain-arr{display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.pain-arr svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
+.pain-r{padding:20px 24px;position:relative}
+.pain-r::before{content:'';position:absolute;left:0;top:15%;height:70%;width:3px;background:rgba(92,184,92,.4);border-radius:2px}
+.pain-r h4{font-size:.62rem;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:5px}
+.pain-r p{font-size:.84rem;color:#fff;line-height:1.5}
+
+/* ─── CERT ─── */
+.cert-wrap{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:40px;align-items:center}
+.cert-img{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);height:440px;max-width:100%}
+.cert-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.9)}
+.cert-info h3{font-size:1.3rem;font-weight:800;margin-bottom:16px;letter-spacing:-.3px}
+.cert-info>p{color:var(--text2);margin-bottom:20px;line-height:1.85;font-size:.88rem}
+.cert-list{list-style:none;margin-bottom:24px}
+.cert-list li{padding:8px 0;color:var(--text2);font-size:.84rem;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)}
+.cert-list li:last-child{border-bottom:none}
+.cert-list li svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
+
+/* ─── MAP ─── */
+.map-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}
+.map-frame{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);min-height:460px;max-width:100%}
+.map-frame iframe{width:100%;height:100%;border:0;min-height:460px;filter:brightness(.85) contrast(1.1);display:block}
+.map-info{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;display:flex;flex-direction:column;justify-content:center}
+.map-info h3{font-size:1.25rem;font-weight:800;margin-bottom:10px}
+.map-addr{color:var(--text2);font-size:.88rem;line-height:1.7;margin-bottom:16px}
+.map-phone{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-.3px;margin-bottom:28px;display:block}
+.map-phone:hover{color:var(--gold)}
+.map-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.map-tag{padding:5px 12px;background:var(--gold-bg);border:1px solid var(--gold-border);color:var(--gold);font-size:.7rem;font-weight:600;border-radius:5px}
+.map-badges{display:flex;flex-direction:column;gap:8px}
+.map-badge{display:flex;align-items:center;gap:8px;color:var(--text2);font-size:.8rem}
+.map-badge svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
+
+/* ─── STEPS ─── */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:28px;left:12%;right:12%;height:1px;background:var(--border2)}
+.step{text-align:center;position:relative;padding:0 16px}
+.step-n{width:64px;height:64px;border-radius:50%;background:var(--bg);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;color:var(--gold);margin:0 auto 20px;position:relative;z-index:2}
+.step h3{font-size:.88rem;font-weight:700;margin-bottom:6px}
+.step p{font-size:.78rem;color:var(--text3);line-height:1.6;max-width:180px;margin:0 auto}
+
+/* ─── FORM ─── */
+.form-w{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.form-info h2{font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:800;margin-bottom:14px;letter-spacing:-.4px}
+.form-info>p{color:var(--text2);margin-bottom:24px;line-height:1.85;font-size:.9rem}
+.form-list{list-style:none;margin-bottom:28px}
+.form-list li{padding:8px 0;display:flex;align-items:center;gap:10px;color:var(--text2);font-size:.84rem;border-bottom:1px solid var(--border)}
+.form-list li:last-child{border-bottom:none}
+.form-list li svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;flex-shrink:0}
+.form-photo{width:100%;height:200px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)}
+.form-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.form-box{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;width:100%;min-width:0}
+.ff{margin-bottom:16px}
+.ff label{display:block;font-size:.72rem;font-weight:600;color:var(--text3);margin-bottom:6px;letter-spacing:.5px;text-transform:uppercase}
+.ff input,.ff select,.ff textarea{width:100%;padding:12px 16px;border-radius:8px;border:1px solid var(--border2);background:var(--bg);color:#fff;font-size:.86rem;font-family:var(--font);transition:border-color .2s;outline:none}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--gold)}
+.ff select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%238faa6e' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.ff select option{background:var(--bg3);color:#fff}
+.ff textarea{resize:vertical;min-height:70px}
+.form-submit{width:100%;padding:14px}
+
+/* ─── FOOTER ─── */
+.footer{padding:56px 0 20px;background:var(--bg);border-top:1px solid var(--border)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.footer .logo{margin-bottom:12px;display:inline-block}
+.footer-about{color:var(--text3);font-size:.78rem;line-height:1.7}
+.footer h4{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--text3);margin-bottom:14px}
+.fl{list-style:none}
+.fl li{margin-bottom:8px}
+.fl a{color:var(--text2);font-size:.8rem;transition:color .2s}
+.fl a:hover{color:var(--gold)}
+.footer-bot{text-align:center;padding-top:20px;border-top:1px solid var(--border);color:var(--text3);font-size:.68rem;letter-spacing:.3px}
+
+/* ─── SIMPLE FADE-IN (CSS only, no JS needed) ─── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.sec,.stats,.hero-content,.hero-visual,.footer{animation:fadeUp .5s ease both}
+.sec:nth-of-type(2){animation-delay:.05s}
+.sec:nth-of-type(3){animation-delay:.1s}
+.sec:nth-of-type(4){animation-delay:.15s}
+
+/* ─── RESPONSIVE: TABLET ─── */
+@media(max-width:1024px){
+html{font-size:16px}
+.wrap{padding:0 28px}
+.hero{grid-template-columns:1fr;min-height:auto}
+.hero-content{padding:100px 0 40px}
+.hero-content .wrap{margin:0;max-width:100%;padding:0 28px}
+.hero-visual{height:380px}
+.hero-visual::after{background:linear-gradient(180deg,var(--bg) 0%,transparent 30%)}
+.hero-scroll{display:none}
+.ugrid{grid-template-columns:repeat(2,1fr)}
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+.stat:nth-child(2)::after{display:none}
+.steps{grid-template-columns:repeat(2,1fr);gap:24px}
+.steps::before{display:none}
+.footer-grid{grid-template-columns:repeat(2,1fr)}
+.cert-wrap{grid-template-columns:1fr}
+.cert-img{height:300px}
+.form-w{grid-template-columns:1fr;gap:36px}
+.form-photo{height:200px}
+.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px}
+.gallery img:first-child{grid-row:auto}
+.map-grid{grid-template-columns:1fr}
+.map-frame{min-height:300px}
+.map-frame iframe{min-height:300px}
+.map-info{padding:24px}
+}
+
+/* ─── RESPONSIVE: MOBILE ─── */
+@media(max-width:768px){
+html{font-size:16px}
+.wrap{padding:0 20px}
+
+/* Header: always visible background, not transparent */
+.hdr{position:relative;padding:16px 0;background:var(--bg);border-bottom:1px solid var(--border)}
+.hdr.scrolled{padding:16px 0;background:var(--bg)}
+.hdr .wrap{padding:0 20px}
+.nav{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,11,15,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:999;display:none}
+.nav.open{display:flex}
+.nav.open a{color:#fff!important;font-size:1.2rem;font-weight:600}
+.burger{display:block}
+.hdr-phone{display:none}
+.hdr-right .btn{display:none}
+
+/* Hero: full width, proper sizing */
+.hero{grid-template-columns:1fr;min-height:auto}
+.hero-content{padding:32px 0 28px}
+.hero-content .wrap{padding:0 20px;margin:0;max-width:100%}
+.hero h1{font-size:2.2rem;letter-spacing:-1px;line-height:1.1;margin-bottom:20px}
+.hero-sub{font-size:1rem;margin-bottom:28px;max-width:100%;line-height:1.7}
+.hero-badge{font-size:.7rem;margin-bottom:20px}
+.hero-visual{height:280px}
+.hero-visual::after{background:linear-gradient(180deg,var(--bg) 0%,transparent 20%)}
+.hero-btns{flex-direction:column;gap:10px}
+.hero-btns .btn{width:100%;text-align:center;padding:16px 24px;font-size:.95rem}
+.hero-trust{gap:24px;flex-wrap:wrap;margin-top:4px}
+.hero-trust-item .tv{font-size:1.5rem}
+.hero-trust-item .tl{font-size:.72rem}
+
+/* Sections */
+.sec{padding:48px 0}
+.stag{font-size:.65rem;letter-spacing:3px;margin-bottom:10px}
+.sh{font-size:1.6rem;letter-spacing:-.5px;margin-bottom:12px}
+.sd{font-size:.95rem;margin-bottom:28px;max-width:100%;line-height:1.7}
+
+/* Stats */
+.stats-grid{grid-template-columns:1fr 1fr}
+.stat{padding:24px 16px}
+.stat-v{font-size:1.6rem!important}
+.stat-l{font-size:.7rem}
+.stat:nth-child(2)::after{display:none}
+
+/* Gallery */
+.gallery{grid-template-columns:1fr;grid-template-rows:220px 180px}
+.gallery img:nth-child(3),.gallery img:nth-child(4),.gallery img:nth-child(5){display:none}
+
+/* Product tabs & cards */
+.ptabs{gap:6px;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px}
+.ptabs::-webkit-scrollbar{display:none}
+.ptab{padding:10px 18px;font-size:.8rem;white-space:nowrap;flex-shrink:0}
+.pgrid{grid-template-columns:1fr}
+.pcard{margin-bottom:4px}
+.pcard-img{height:220px}
+.pcard-body{padding:20px}
+.pcard h3{font-size:1rem}
+.pcard-specs{font-size:.82rem}
+.pcard-price{font-size:1.3rem}
+.pcard-btn{width:38px;height:38px}
+
+/* UTP cards */
+.ugrid{grid-template-columns:1fr}
+.ucard{padding:24px 20px}
+.ucard-ico{width:44px;height:44px}
+.ucard-ico svg{width:22px;height:22px}
+.ucard h3{font-size:1rem}
+.ucard p{font-size:.88rem;line-height:1.65}
+.ucard-n{font-size:.6rem}
+
+/* Pains */
+.pains{gap:10px}
+.pain{grid-template-columns:1fr}
+.pain-arr{padding:4px 0;transform:rotate(90deg)}
+.pain-arr svg{width:18px;height:18px}
+.pain-l,.pain-r{padding:18px 20px}
+.pain-l h4,.pain-r h4{font-size:.65rem}
+.pain-l p,.pain-r p{font-size:.9rem}
+.pain-l::before,.pain-r::before{width:3px;top:0;height:100%}
+
+/* Cert */
+.cert-wrap{grid-template-columns:1fr;gap:24px}
+.cert-img{height:260px}
+.cert-info h3{font-size:1.2rem}
+.cert-info>p{font-size:.92rem}
+.cert-list li{font-size:.88rem;padding:8px 0}
+.cert-list li svg{width:18px;height:18px}
+
+/* Map */
+.map-grid{grid-template-columns:1fr}
+.map-frame{min-height:280px}
+.map-frame iframe{min-height:280px}
+.map-info{padding:24px}
+.map-info h3{font-size:1.15rem}
+.map-addr{font-size:.9rem}
+.map-phone{font-size:1.2rem;margin-bottom:20px}
+.map-tags{gap:6px}
+.map-tag{font-size:.72rem;padding:5px 12px}
+.map-badge{font-size:.85rem}
+.map-badge svg{width:16px;height:16px}
+
+/* Steps */
+.steps{grid-template-columns:1fr 1fr;gap:16px}
+.steps::before{display:none}
+.step{padding:0 8px}
+.step-n{width:52px;height:52px;font-size:1rem}
+.step h3{font-size:.9rem}
+.step p{font-size:.8rem;max-width:100%}
+
+/* Form */
+.form-w{grid-template-columns:1fr;gap:28px}
+.form-info h2{font-size:1.5rem}
+.form-info>p{font-size:.92rem}
+.form-list li{font-size:.88rem}
+.form-photo{height:180px}
+.form-box{padding:24px}
+.ff label{font-size:.72rem}
+.ff input,.ff select,.ff textarea{padding:13px 16px;font-size:.92rem}
+.form-submit{padding:16px;font-size:.92rem}
+
+/* Footer */
+.footer{padding:40px 0 16px}
+.footer-grid{grid-template-columns:1fr;gap:24px}
+.footer-grid>div{margin-bottom:4px}
+.footer .logo{font-size:1.2rem}
+.footer-about{font-size:.82rem}
+.footer h4{font-size:.65rem}
+.fl a{font-size:.85rem}
+.footer-bot{font-size:.7rem;padding-top:16px}
+}
+
+/* ─── RESPONSIVE: SMALL PHONE ─── */
+@media(max-width:400px){
+html{font-size:15px}
+.wrap{padding:0 16px}
+.hdr .wrap{padding:0 16px}
+.logo{font-size:1.1rem}
+.hero-content{padding:28px 0 20px}
+.hero-content .wrap{padding:0 16px}
+.hero h1{font-size:1.85rem;letter-spacing:-.4px}
+.hero-sub{font-size:.92rem;margin-bottom:24px}
+.hero-badge{font-size:.62rem;padding:5px 12px 5px 8px}
+.hero-visual{height:220px}
+.hero-trust{gap:16px}
+.hero-trust-item .tv{font-size:1.3rem}
+.hero-trust-item .tl{font-size:.65rem}
+.sec{padding:40px 0}
+.stat{padding:20px 12px}
+.stat-v{font-size:1.4rem!important}
+.stat::after{display:none!important}
+.sh{font-size:1.4rem}
+.sd{font-size:.88rem}
+.pcard-img{height:200px}
+.cert-img{height:220px}
+.steps{grid-template-columns:1fr;gap:12px}
+.step{margin-bottom:4px}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header class="hdr" id="hdr">
+<div class="wrap">
+ <a href="#" class="logo">ПЕПЛОБЛОК<span>.РУ</span></a>
+ <nav class="nav" id="nav">
+  <a href="#products">Продукция</a>
+  <a href="#why">Преимущества</a>
+  <a href="#geo">Доставка</a>
+  <a href="#how">Как работаем</a>
+  <a href="#contact">Заявка</a>
+ </nav>
+ <div class="hdr-right">
+  <a href="tel:+79287116666" class="hdr-phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>8 (928) 711-66-66</a>
+  <a href="#contact" class="btn btn-gold btn-sm">Оставить заявку</a>
+ </div>
+ <button class="burger" id="burger" aria-label="Меню"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+<div class="hero-content">
+ <div class="wrap">
+  <div class="hero-badge"><span class="hero-dot"></span>Собственное производство</div>
+  <h1>Пеплоблоки<br><span class="thin">и фундаментные</span><br>блоки <span class="gold">ФБС</span></h1>
+  <p class="hero-sub">Пропаренные в промышленной печи. Идеальная геометрия. Собственный автопарк. Оплата только после получения.</p>
+  <div class="hero-btns">
+   <a href="#contact" class="btn btn-gold">Рассчитать стоимость</a>
+   <a href="#products" class="btn btn-outline">Каталог и цены</a>
+  </div>
+  <div class="hero-trust">
+   <div class="hero-trust-item"><div class="tv" style="color:var(--gold)">10+</div><div class="tl">Лет на рынке</div></div>
+   <div class="hero-trust-item"><div class="tv">0 ₽</div><div class="tl">Предоплата</div></div>
+   <div class="hero-trust-item"><div class="tv" style="color:var(--gold)">КБР</div><div class="tl">+ вся Россия</div></div>
+  </div>
+ </div>
+</div>
+<div class="hero-visual">
+ <img src="photo/hero.jpg" alt="Производственный цех Пеплоблок.ру">
+</div>
+<div class="hero-scroll"><span>Листай вниз</span><div class="hero-scroll-line"></div></div>
+</section>
+
+<!-- ─── STATS ─── -->
+<section class="stats">
+<div class="wrap" style="padding:0;max-width:100%">
+ <div class="stats-grid">
+  <div class="stat"><div class="stat-v" data-to="10" data-suf=" лет">10 лет</div><div class="stat-l">На рынке КБР</div></div>
+  <div class="stat"><div class="stat-v" data-to="0" data-suf=" ₽">0 ₽</div><div class="stat-l">Предоплата</div></div>
+  <div class="stat"><div class="stat-v" data-to="29" data-pre="от " data-suf=" ₽">от 29 ₽</div><div class="stat-l">За пеплоблок</div></div>
+  <div class="stat"><div class="stat-v" data-txt="Вся РФ">Вся РФ</div><div class="stat-l">Доставка</div></div>
+ </div>
+</div>
+</section>
+
+<!-- ─── PRODUCTION GALLERY ─── -->
+<section class="sec sec-alt">
+<div class="wrap">
+ <div class="stag">Производство</div>
+ <h2 class="sh">Собственный цех<br>в&nbsp;Дугулубгей, г.&nbsp;Баксан</h2>
+ <p class="sd">Полный цикл: от замеса до пропарки и отгрузки. Контролируем качество на каждом этапе.</p>
+ <div class="gallery">
+  <img src="photo/gallery-1.jpg" alt="КАМАЗ с краном-манипулятором" loading="lazy" loading="lazy">
+  <img src="photo/gallery-2.jpg" alt="Загруженный грузовик" loading="lazy" loading="lazy">
+  <img src="photo/peplo-pack.jpg" alt="Пеплоблоки в упаковке" loading="lazy" loading="lazy">
+  <img src="photo/peplo-bulk.jpg" alt="Пеплоблоки на поддонах" loading="lazy" loading="lazy">
+  <img src="photo/gallery-4.jpg" alt="Пеплоблок крупным планом" loading="lazy" loading="lazy">
+ </div>
+</div>
+</section>
+
+<!-- ─── PRODUCTS ─── -->
+<section class="sec" id="products">
+<div class="wrap">
+ <div class="stag">Каталог</div>
+ <h2 class="sh">Наша продукция</h2>
+ <p class="sd">Всегда в наличии на складе. Забирайте самовывозом или заказывайте доставку.</p>
+ <div class="ptabs">
+  <button class="ptab active" onclick="filt('all',this)">Все</button>
+  <button class="ptab" onclick="filt('peplo',this)">Пеплоблоки</button>
+  <button class="ptab" onclick="filt('fbs40',this)">ФБС-40</button>
+  <button class="ptab" onclick="filt('fbs30',this)">ФБС-30</button>
+ </div>
+ <div class="pgrid" id="pg">
+  <div class="pcard" data-c="peplo">
+   <div class="pcard-img"><img src="photo/peplo-bulk.jpg" alt="Пеплоблок валом" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span><span class="pcard-badge badge-gold">Пропаренный</span></div></div>
+   <div class="pcard-body"><h3>Пеплоблок валом</h3><div class="pcard-specs">390×190×190 мм · 15 кг · 0,015 м³</div><div class="pcard-bottom"><div class="pcard-price">29 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="peplo">
+   <div class="pcard-img"><img src="photo/peplo-pack.jpg" alt="Пеплоблок в упаковке" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span><span class="pcard-badge badge-gold">Пропаренный</span></div></div>
+   <div class="pcard-body"><h3>Пеплоблок в упаковке</h3><div class="pcard-specs">390×190×190 мм · 15 кг · 0,015 м³</div><div class="pcard-bottom"><div class="pcard-price">31 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs40">
+   <div class="pcard-img"><img src="photo/fbs40-240.jpg" alt="ФБС-40 2.40" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span><span class="pcard-badge badge-gold">Пропаренный</span></div></div>
+   <div class="pcard-body"><h3>ФБС-40 — 2.40 м</h3><div class="pcard-specs">2400×400 мм · Полноразмерный блок</div><div class="pcard-bottom"><div class="pcard-price">2 000 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs40">
+   <div class="pcard-img"><img src="photo/fbs40-120.jpg" alt="ФБС-40 1.20" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span></div></div>
+   <div class="pcard-body"><h3>ФБС-40 — 1.20 м</h3><div class="pcard-specs">1200×400 мм · Доборный блок</div><div class="pcard-bottom"><div class="pcard-price">1 100 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs40">
+   <div class="pcard-img"><img src="photo/fbs40-240.jpg" alt="ФБС-40 0.80" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span></div></div>
+   <div class="pcard-body"><h3>ФБС-40 — 0.80 м</h3><div class="pcard-specs">800×400 мм · Малый доборный</div><div class="pcard-bottom"><div class="pcard-price">800 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs30">
+   <div class="pcard-img"><img src="photo/fbs40-120.jpg" alt="ФБС-30 2.40" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span><span class="pcard-badge badge-gold">Пропаренный</span></div></div>
+   <div class="pcard-body"><h3>ФБС-30 — 2.40 м</h3><div class="pcard-specs">2400×300 мм · Полноразмерный</div><div class="pcard-bottom"><div class="pcard-price">1 800 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs30">
+   <div class="pcard-img"><img src="photo/fbs40-240.jpg" alt="ФБС-30 1.20" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span></div></div>
+   <div class="pcard-body"><h3>ФБС-30 — 1.20 м</h3><div class="pcard-specs">1200×300 мм · Доборный блок</div><div class="pcard-bottom"><div class="pcard-price">1 000 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+  <div class="pcard" data-c="fbs30">
+   <div class="pcard-img"><img src="photo/fbs40-120.jpg" alt="ФБС-30 0.80" loading="lazy" loading="lazy"><div class="pcard-badges"><span class="pcard-badge badge-green">В наличии</span></div></div>
+   <div class="pcard-body"><h3>ФБС-30 — 0.80 м</h3><div class="pcard-specs">800×300 мм · Малый доборный</div><div class="pcard-bottom"><div class="pcard-price">700 ₽<small>/шт</small></div><a href="#contact" class="pcard-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- ─── WHY US ─── -->
+<section class="sec sec-alt" id="why">
+<div class="wrap">
+ <div class="stag">Преимущества</div>
+ <h2 class="sh">Почему выбирают нас</h2>
+ <p class="sd">9 причин доверять Пеплоблок.ру</p>
+ <div class="ugrid">
+  <div class="ucard"><div class="ucard-n">Ключевое</div><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M12 22c4.97 0 8-3.58 8-8 0-2.21-.89-4.1-2-5.5-.42-.53-1.58-2.5-2-3.5 0 0-1.89 2.09-2 2-1.18-1.1-1.53-3.09-1-5C11.5 3.5 9.9 5.2 9 6.5 7 9.5 4 12.58 4 15c0 4.42 3.03 7 8 7z"/></svg></div><h3>Пропарочная печь для ФБС</h3><p>Единственные в Баксане с промышленной камерой. Марочная прочность, влагостойкость, без усадки.</p></div>
+  <div class="ucard"><div class="ucard-n">Ключевое</div><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M3 5v14h18V5H3zm4 12H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V7h2v2zm10 8h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8V7h8v2z"/></svg></div><h3>Идеальная геометрия</h3><p>Новая матрица. Ровные грани, точные размеры — экономия раствора и времени кладки.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M12 15l-2 5 2-1.5L14 20l-2-5zM7 2h10a2 2 0 012 2v10a6 6 0 01-12 0V4a2 2 0 012-2z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Сертификат качества</h3><p>Официальный документ на ФБС. Вышлем до покупки.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5.25-3.15 9.62-7 11-3.85-1.38-7-5.75-7-11V6l7-4z"/></svg></div><h3>Без предоплаты</h3><p>Полный цикл: производство, доставка, установка. Платите после получения.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3.5V16h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Собственный автопарк</h3><p>Свои машины — дешевле рыночной. Без посредников.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><h3>Установка ФБС</h3><p>Установим блоки на объекте. Не нужно искать людей.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M5 21V7l7-5 7 5v14"/><path d="M12 2v10m-7 0h14"/><path d="M9 21v-4h6v4"/></svg></div><h3>Кран с водителем</h3><p>Свой кран для разгрузки и монтажа.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div><h3>Всегда в наличии</h3><p>Пеплоблоки на складе постоянно. Без ожидания.</p></div>
+  <div class="ucard"><div class="ucard-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>10 лет на рынке</h3><p>Репутация, процессы, сотни заказов по КБР и за пределами.</p></div>
+ </div>
+</div>
+</section>
+
+<!-- ─── PAINS ─── -->
+<section class="sec">
+<div class="wrap">
+ <div class="stag">Знакомо?</div>
+ <h2 class="sh">Проблемы рынка — наши решения</h2>
+ <p class="sd">Мы знаем, с чем сталкиваются застройщики.</p>
+ <div class="pains">
+  <div class="pain"><div class="pain-l"><h4>Проблема</h4><p>Кривые блоки — стены ведёт, раствора уходит больше</p></div><div class="pain-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="pain-r"><h4>Решение</h4><p>Новая матрица — блоки стыкуются без подгонки</p></div></div>
+  <div class="pain"><div class="pain-l"><h4>Проблема</h4><p>Дорогая доставка или только самовывоз</p></div><div class="pain-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="pain-r"><h4>Решение</h4><p>Свой автопарк — доставка дешевле рыночной</p></div></div>
+  <div class="pain"><div class="pain-l"><h4>Проблема</h4><p>Сырые, непрочные блоки — крошатся и трескаются</p></div><div class="pain-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="pain-r"><h4>Решение</h4><p>Пропарочная печь + сертификат ГОСТ</p></div></div>
+  <div class="pain"><div class="pain-l"><h4>Проблема</h4><p>Завышенные цены из-за перекупщиков</p></div><div class="pain-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="pain-r"><h4>Решение</h4><p>Мы производитель — от 29 ₽ без накруток</p></div></div>
+  <div class="pain"><div class="pain-l"><h4>Проблема</h4><p>Страх отдать предоплату и не получить товар</p></div><div class="pain-arr"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div><div class="pain-r"><h4>Решение</h4><p>0 ₽ предоплата — оплата после получения и проверки</p></div></div>
+ </div>
+</div>
+</section>
+
+<!-- ─── CERT ─── -->
+<section class="sec sec-alt">
+<div class="wrap">
+ <div class="cert-wrap">
+  <div class="cert-img"><img src="photo/cert.jpg" alt="Разгрузка блоков" loading="lazy" loading="lazy"></div>
+  <div class="cert-info">
+   <div class="stag">Качество</div>
+   <h3>Сертификат на&nbsp;ФБС</h3>
+   <p>Продукция прошла испытания в аккредитованной лаборатории. Вышлем документ до покупки.</p>
+   <ul class="cert-list">
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Соответствие ГОСТ</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Подтверждённая марочная прочность</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Аккредитованная лаборатория</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Документ по запросу до покупки</li>
+   </ul>
+   <a href="#contact" class="btn btn-gold">Запросить сертификат</a>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- ─── GEO ─── -->
+<section class="sec" id="geo">
+<div class="wrap">
+ <div class="stag">География</div>
+ <h2 class="sh">Доставляем по&nbsp;всей&nbsp;России</h2>
+ <p class="sd">Производство в Дугулубгей, г. Баксан. Ежедневная доставка по КБР и всей России.</p>
+ <div class="map-grid">
+  <div class="map-frame">
+   <iframe src="https://www.google.com/maps?q=43.6506,43.5475&z=16&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="map-info">
+   <h3>Наше производство</h3>
+   <p class="map-addr">Дугулубгей, Баксанское шоссе, 4<br>г.&nbsp;Баксан, КБР</p>
+   <a href="tel:+79287116666" class="map-phone">8 (928) 711-66-66</a>
+   <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:10px">Ежедневная доставка</div>
+   <div class="map-tags">
+    <span class="map-tag">Баксан</span>
+    <span class="map-tag">Нальчик</span>
+    <span class="map-tag">Прохладный</span>
+    <span class="map-tag">Терек</span>
+    <span class="map-tag">Чегем</span>
+    <span class="map-tag">Вся КБР</span>
+    <span class="map-tag">Вся РФ</span>
+   </div>
+   <div class="map-badges">
+    <div class="map-badge"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3.5V16h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Собственный автопарк</div>
+    <div class="map-badge"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v5c0 5.25-3.15 9.62-7 11-3.85-1.38-7-5.75-7-11V6l7-4z"/></svg>Оплата при получении</div>
+    <div class="map-badge"><svg viewBox="0 0 24 24"><path d="M5 21V7l7-5 7 5v14"/><path d="M12 2v10m-7 0h14"/></svg>Кран с водителем</div>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- ─── STEPS ─── -->
+<section class="sec sec-alt" id="how">
+<div class="wrap">
+ <div class="stag" style="text-align:center;display:block;margin-left:auto;margin-right:auto;width:fit-content">Процесс</div>
+ <h2 class="sh sh-c">Как мы работаем</h2>
+ <p class="sd sd-c">От заявки до результата — без бюрократии и предоплаты.</p>
+ <div class="steps">
+  <div class="step"><div class="step-n">1</div><h3>Заявка</h3><p>Звоните или оставляйте заявку на сайте</p></div>
+  <div class="step"><div class="step-n">2</div><h3>Расчёт</h3><p>Считаем стоимость с доставкой. Без скрытых наценок</p></div>
+  <div class="step"><div class="step-n">3</div><h3>Доставка</h3><p>Привозим своим транспортом. Кран и установка — если нужно</p></div>
+  <div class="step"><div class="step-n">4</div><h3>Оплата</h3><p>Платите после получения и проверки на месте</p></div>
+ </div>
+</div>
+</section>
+
+<!-- ─── FORM ─── -->
+<section class="sec" id="contact">
+<div class="wrap">
+ <div class="form-w">
+  <div class="form-info">
+   <div class="stag">Заявка</div>
+   <h2>Рассчитаем ваш заказ<br>за&nbsp;15&nbsp;минут</h2>
+   <p>Перезвоним, подберём продукцию, рассчитаем стоимость с доставкой до вашего объекта.</p>
+   <ul class="form-list">
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Бесплатная консультация</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Расчёт с доставкой</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Без предоплаты</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Сертификат по запросу</li>
+    <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Скидка при опте</li>
+   </ul>
+   <div class="form-photo"><img src="photo/form.jpg" alt="Доставка блоков" loading="lazy" loading="lazy"></div>
+  </div>
+  <div class="form-box">
+   <form id="leadForm" onsubmit="onSubmit(event)">
+    <div class="ff"><label>Ваше имя</label><input type="text" id="fName" placeholder="Как к вам обращаться?" required></div>
+    <div class="ff"><label>Телефон</label><input type="tel" id="fPhone" placeholder="+7 (___) ___-__-__" required></div>
+    <div class="ff"><label>Что интересует?</label><select id="fProduct"><option>Пеплоблоки</option><option>ФБС-40</option><option>ФБС-30</option><option>Пеплоблоки + ФБС</option><option>Консультация</option></select></div>
+    <div class="ff"><label>Населённый пункт</label><input type="text" id="fCity" placeholder="Куда доставить?"></div>
+    <div class="ff"><label>Комментарий</label><textarea id="fComment" placeholder="Объём, сроки, вопросы..."></textarea></div>
+    <button type="submit" class="btn btn-gold form-submit" id="sbtn">Отправить заявку</button>
+   </form>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+<div class="wrap">
+ <div class="footer-grid">
+  <div>
+   <div class="logo">ПЕПЛОБЛОК<span>.РУ</span></div>
+   <p class="footer-about">Собственное производство стеновых и&nbsp;фундаментных блоков.<br>Дугулубгей, Баксанское шоссе, 4, г.&nbsp;Баксан, КБР.<br>Тел.: 8&nbsp;(928)&nbsp;711-66-66</p>
+  </div>
+  <div><h4>Продукция</h4><ul class="fl"><li><a href="#products">Пеплоблоки</a></li><li><a href="#products">ФБС-40</a></li><li><a href="#products">ФБС-30</a></li></ul></div>
+  <div><h4>Компания</h4><ul class="fl"><li><a href="#why">Преимущества</a></li><li><a href="#how">Как работаем</a></li><li><a href="#geo">Доставка</a></li></ul></div>
+  <div><h4>Контакты</h4><ul class="fl"><li><a href="tel:+79287116666">8 (928) 711-66-66</a></li><li>Дугулубгей, Баксанское шоссе, 4</li><li>г.&nbsp;Баксан, КБР</li><li><a href="#contact">Оставить заявку</a></li></ul></div>
+ </div>
+ <div class="footer-bot">&copy; 2016–2026 ПЕПЛОБЛОК.РУ — Производство блоков. Дугулубгей, Баксанское шоссе,&nbsp;4, г.&nbsp;Баксан, КБР</div>
+</div>
+</footer>
+
+<script>
+(function(){
+ var h=document.getElementById('hdr');
+ if(h) window.addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>60)});
+ var burger=document.getElementById('burger');
+ var nav=document.getElementById('nav');
+ if(burger&&nav){
+  burger.addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+ }
+})();
+function filt(c,btn){
+ document.querySelectorAll('.pcard').forEach(function(el){
+  if(c==='all'||el.dataset.c===c){el.style.display='';setTimeout(function(){el.style.opacity='1';el.style.transform=''},20)}
+  else{el.style.opacity='0';el.style.transform='translateY(12px)';setTimeout(function(){el.style.display='none'},300)}});
+ document.querySelectorAll('.ptab').forEach(function(b){b.classList.remove('active')});
+ btn.classList.add('active');}
+function onSubmit(e){
+ e.preventDefault();
+ var name=document.getElementById('fName').value.trim();
+ var phone=document.getElementById('fPhone').value.trim();
+ var product=document.getElementById('fProduct').value;
+ var city=document.getElementById('fCity').value.trim();
+ var comment=document.getElementById('fComment').value.trim();
+ if(!name||!phone){alert('Заполните имя и телефон');return}
+ var msg='*Заявка с сайта Пеплоблок.ру*%0A'
+  +'Имя: '+encodeURIComponent(name)+'%0A'
+  +'Телефон: '+encodeURIComponent(phone)+'%0A'
+  +'Продукция: '+encodeURIComponent(product)+'%0A'
+  +(city?'Город: '+encodeURIComponent(city)+'%0A':'')
+  +(comment?'Комментарий: '+encodeURIComponent(comment):'');
+ var waUrl='https://wa.me/79287116666?text='+msg;
+ window.open(waUrl,'_blank');
+ var b=document.getElementById('sbtn');
+ b.textContent='Отправлено!';b.style.background='var(--green)';
+ setTimeout(function(){b.textContent='Отправить заявку';b.style.background=''},4000);}
+</script>
+</body>
+</html>
